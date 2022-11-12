@@ -18,4 +18,5 @@ Route::get('/', 'TextController@getData')->name('home');
 
 Route::post('/send', 'TextController@addData');
 
+//Route::get('/send-email', 'FeedbackController@send');
 

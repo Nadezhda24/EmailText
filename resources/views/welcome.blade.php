@@ -22,18 +22,18 @@
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">№</th>
             <th scope="col">Текст</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($data  as $el)
+        @for($i = 0; $i < count($data); $i++)
             <tr>
-                <th scope="row">{{$el->id}}</th>
-                <td>{{$el->text}}</td>
+                <th scope="row">{{$i + 1}}</th>
+                <td>{{$data[$i]->text}}</td>
 
             </tr>
-        @endforeach
+        @endfor
         </tbody>
     </table>
     </body>
