@@ -18,5 +18,23 @@
         </div>
         <button type="submit" name="button" class="btn btn-success">Сохранить</button>
     </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Текст</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($data  as $el)
+            <tr>
+                <th scope="row">{{$el->id}}</th>
+                <td>{{$el->text}}</td>
+
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
     </body>
 </html>

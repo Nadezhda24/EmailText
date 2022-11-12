@@ -14,4 +14,8 @@ class TextController extends Controller{
         return redirect()->route('home');
     }
 
+    public function getData(){
+       return view('welcome', ['data' => Text::all()]);
+    }
+
 }

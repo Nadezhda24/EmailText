@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'TextController@getData')->name('home');
 
 
 Route::post('/send', 'TextController@addData');
