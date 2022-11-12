@@ -10,7 +10,7 @@
     </head>
     <body>
 
-    <form action="/send" method="post" style="margin: 20px">
+    <form action="send" method="post" style="margin: 20px">
         @csrf
         <div class="form-group">
             <label for="name">Введите текст</label>
