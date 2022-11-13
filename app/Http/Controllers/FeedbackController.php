@@ -1,15 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Model\Text;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\FeedbackMail;
 
 class FeedbackController extends Controller{
 
-    public function send() {
-        $comment = 'Это сообщение отправлено из формы обратной связи';
-        $toEmail = "gerasimova.nadezhda2001@gmail.com";
+    public function __invoke() {
+        $comment = "Количество записей на текущий момент: ".Text::all()->count();
+        $toEmail = "jungariki@list.ru";
         Mail::to($toEmail)->send(new FeedbackMail($comment));
-        return 'Сообщение отправлено на адрес '. $toEmail;
     }
 }
