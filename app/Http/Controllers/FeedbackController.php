@@ -12,4 +12,6 @@ class FeedbackController extends Controller{
         $toEmail = "jungariki@list.ru";
         Mail::to($toEmail)->send(new FeedbackMail($comment));
     }
+
 }
+

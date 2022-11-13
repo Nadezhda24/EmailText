@@ -20,7 +20,7 @@ class FeedbackMail extends Mailable
      */
     public function __construct($dataEmail)
     {
-        $this->$dataEmail = $dataEmail;
+        $this->dataEmail = $dataEmail;
     }
 
     /**
@@ -30,6 +30,6 @@ class FeedbackMail extends Mailable
      */
     public function build()
     {
-        return $this->view('welcome');
+        return $this->view('message');
     }
 }

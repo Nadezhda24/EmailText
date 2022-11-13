@@ -3,8 +3,12 @@
 namespace App\Console;
 
 use App\Http\Controllers\FeedbackController;
+use App\Mail\FeedbackMail;
+use App\Model\Text;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\Mail;
+use mysql_xdevapi\Exception;
 
 class Kernel extends ConsoleKernel
 {
@@ -25,7 +29,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(new FeedbackController())->hourly();
+        $schedule->call(new FeedbackController)->hourly();
     }
 
     /**
