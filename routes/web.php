@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('/send', 'UserController@sendPassword');
+Route::post('/account', 'UserController@sendLogin');
+Route::get('/account/{id}', 'ListController@Account');
 Route::get('/send', 'UserController@Authorization');
-
-
 Route::get('/', 'UserController@Registration');
 

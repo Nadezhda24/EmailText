@@ -24,7 +24,7 @@
             </div>
 
 
-            <form action="send" method="post">
+            <form action="account" method="post">
                 @csrf
                 <div class="input-group block_registration">
                     <span class="input-group-text" id="input-group-left-example">@</span>

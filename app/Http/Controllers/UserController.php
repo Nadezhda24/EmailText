@@ -17,6 +17,21 @@ class UserController extends Controller{
         return view('auth');
     }
 
+    public function sendLogin(Request $request){
+         $user = User:: where(['email' => $request->email])->get()[0];
+         if ($user != null){
+             if (password_verify(trim($request->password), $user->password)){
+                 return view('account');
+             }else{
+                 return "Пароль не верный";
+             }
+         }else{
+             return "Пользователь не найден";
+         }
+
+    }
+
+
     public function sendPassword(Request $request){
         $comb = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890%$';
         $pass = array();
@@ -32,10 +47,14 @@ class UserController extends Controller{
 
         try{
             Mail::to($toEmail)->send(new FeedbackMail($comment));
+            User::create([
+                'email' => $request->email,
+                'password' => password_hash(implode($pass), PASSWORD_DEFAULT),
+                'role' => 0,
+            ]);
             return view('auth');
         }catch (Exception $e){
             return $e;
         }
-
     }
 }
