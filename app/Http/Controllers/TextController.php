@@ -18,4 +18,6 @@ class TextController extends Controller{
        return view('welcome', ['data' => Text::all()]);
     }
 
+
+
 }

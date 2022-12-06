@@ -13,7 +13,13 @@
         <div>
             <div class="row block_registration">
                 <div class="mx-auto">
-                    <h3>Регистрация</h3>
+                    <h3>Авторизация</h3>
+                </div>
+            </div>
+
+            <div class="row block_registration">
+                <div class="mx-auto">
+                    <p>Ваш пароль отправлен на почту</p>
                 </div>
             </div>
 
@@ -22,10 +28,15 @@
                 @csrf
                 <div class="input-group block_registration">
                     <span class="input-group-text" id="input-group-left-example">@</span>
-                    <input id="email" name="email" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="input-group-left">
+                    <input id="email" name="email" type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="input-group-left">
                 </div>
+
+                <div class="form-group">
+                    <input id="password" name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+                </div>
+
                 <div class="block_registration">
-                    <button style="width: 100%" type="submit" name="button" class="btn btn-success">Получить пароль</button>
+                    <button style="width: 100%" type="submit" name="button" class="btn btn-success">Войти</button>
                 </div>
             </form>
 

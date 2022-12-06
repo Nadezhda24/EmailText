@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'TextController@getData')->name('home');
+//Route::get('/', 'TextController@getData')->name('home');
 
 
-Route::post('/send', 'TextController@addData');
+Route::post('/send', 'UserController@sendPassword');
+Route::get('/send', 'UserController@Authorization');
 
+
+Route::get('/', 'UserController@Registration');
 
