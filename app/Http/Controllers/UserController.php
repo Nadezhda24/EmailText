@@ -21,6 +21,7 @@ class UserController extends Controller{
          $user = User:: where(['email' => $request->email])->get()[0];
          if ($user != null){
              if (password_verify(trim($request->password), $user->password)){
+                 setcookie("id",$user->id,100000);
                  return view('account');
              }else{
                  return "Пароль не верный";
@@ -52,6 +53,7 @@ class UserController extends Controller{
                 'password' => password_hash(implode($pass), PASSWORD_DEFAULT),
                 'role' => 0,
             ]);
+
             return view('auth');
         }catch (Exception $e){
             return $e;

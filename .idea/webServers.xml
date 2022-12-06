@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="980e7152-21ca-437e-9be3-aea3758ba100" name="danbla6h_123" url="http://danbla6h.beget.tech">
+      <webServer id="c00bd73f-7a59-4392-bbba-94ff4d919e95" name="danbla6h.beget.tech" url="http://danbla6h.beget.tech">
         <fileTransfer host="danbla6h.beget.tech" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

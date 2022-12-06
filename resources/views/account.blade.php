@@ -48,13 +48,17 @@
                     <div id="intro">
                         <div class="card block_margin">
                             <div class="card-body">
-                                <form >
+                                <form action="product" method="post">
+                                    @csrf
+
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Наименование">
+                                        <input style="display: none" value="{{$list[count($list)-1]->check_list_id}}" type="email" id="id_user" name="id_user" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Наименование">
+
+                                        <input  id="name" name="name" class="form-control" placeholder="Наименование">
                                         <small id="emailHelp" class="form-text text-muted">Введите название продукта</small>
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Цена">
+                                        <input id="price" name="price" class="form-control" placeholder="Цена">
                                         <small id="emailHelp" class="form-text text-muted">Введите предполагаемую цену продукта</small>
                                     </div>
 
@@ -96,9 +100,7 @@
 
 
 
-                    <div class="block_margin">
-                        <button style="width: 100%" type="submit" id="submit" name="button" class="btn btn-success">Создать список</button>
-                    </div>
+
 
                 </div>
 
@@ -128,9 +130,4 @@
 </style>
 
 
-<script>
-    document.querySelector("#submit").onclick = function(){
-        $("intro").style.display = "none"
-    }
-</script>
 

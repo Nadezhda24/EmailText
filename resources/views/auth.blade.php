@@ -41,11 +41,7 @@
             </form>
 
 
-            <div class="row block_registration">
-                <div class="mx-auto">
-                    <p>Уже есть аккаунт?</p>
-                </div>
-            </div>
+
 
 
         </div>

@@ -31,7 +31,7 @@
 
             <div class="row block_registration">
                 <div class="mx-auto">
-                    <p>Уже есть аккаунт?</p>
+                    <a href="/send"><p>Уже есть аккаунт?</p></a>
                 </div>
             </div>
 
